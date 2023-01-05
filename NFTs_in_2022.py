@@ -184,24 +184,24 @@ with st.expander("Check the analysis"):
         st.altair_chart(alt.Chart(df)
         .mark_bar()
         .encode(x='type:N', y='tx_count:Q',color='type')
-        .properties(title='Mints and sales',width=600))
+        .properties(title='Mints and sales',width=300))
     
     col2.altair_chart(alt.Chart(df)
         .mark_bar()
         .encode(x='type:N', y='users_count:Q',color='type')
-        .properties(title='Minters and sellers',width=600))
+        .properties(title='Minters and sellers',width=300))
     
     col1,col2=st.columns(2)
     with col1:
         st.altair_chart(alt.Chart(df3)
         .mark_bar()
         .encode(x='date:N', y='tx_count:Q',color='type')
-        .properties(title='Mints and sales over time',width=600))
+        .properties(title='Mints and sales over time',width=300))
     
     col2.altair_chart(alt.Chart(df3)
         .mark_bar()
         .encode(x='date:N', y='users_count:Q',color='type')
-        .properties(title='Minters and sellers over time',width=600))
+        .properties(title='Minters and sellers over time',width=300))
     
     col3,col4=st.columns(2)
     
@@ -209,23 +209,23 @@ with st.expander("Check the analysis"):
         st.altair_chart(alt.Chart(df)
         .mark_bar()
         .encode(x='type:N', y='total_volume:Q',color='type')
-        .properties(title='Volume minted and sold',width=600))
+        .properties(title='Volume minted and sold',width=300))
     
     col4.altair_chart(alt.Chart(df)
         .mark_bar()
         .encode(x='type:N', y='median_volume:Q',color='type')
-        .properties(title='Median volume minted and sold',width=600))
+        .properties(title='Median volume minted and sold',width=300))
     
     with col3:
         st.altair_chart(alt.Chart(df3)
         .mark_area()
         .encode(x='date:N', y='total_volume:Q',color='type')
-        .properties(title='Volume minted and sold over time',width=600))
+        .properties(title='Volume minted and sold over time',width=300))
     
     col4.altair_chart(alt.Chart(df3)
         .mark_line()
         .encode(x='date:N', y='median_volume:Q',color='type')
-        .properties(title='Median volume minted and sold over time',width=600))
+        .properties(title='Median volume minted and sold over time',width=300))
     
     st.altair_chart(alt.Chart(df2)
         .mark_bar()
